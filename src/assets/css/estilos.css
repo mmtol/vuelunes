@@ -1,7 +1,12 @@
 img
 {
     width: 200px;
-    height: 200px;
+    height: 200px;}
+
+h1 
+{
+    color:darkblue;
+    background-color: lightsteelblue;
 }
 
 h2
@@ -10,8 +15,8 @@ h2
     background-color: lightpink;
 }
 
-h1 
+h3
 {
-    color:darkblue;
-    background-color: lightsteelblue;
+    color: darkolivegreen;
+    background-color: lightgreen;
 }
