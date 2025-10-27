@@ -16,6 +16,14 @@ app.config.globalProperties.$filters={
             esPar = false;
         }
         return esPar;
+    },
+    getResultado(num, mult)
+    {
+        return num * mult;
+    },
+    getOperacion(num,mult)
+    {
+        return num + " * " + mult;
     }
 }
 
