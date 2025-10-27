@@ -6,9 +6,10 @@
         <input type="number" v-model="numero"/>
         <br/>
         <button @click="crearCollatz">Sacar Collatz</button>
-        <h3 v-if="$filters.parimpar(numero)">PAR</h3>
-        <h3 v-else>IMPAR</h3>
-        <h2>{{ collatz }}</h2>
+        <div v-for="num in collatz" :key="num">
+            <h4 v-if="$filters.parimpar(num)" style="color: green;">{{num}}</h4>
+            <h4 v-else style="color: red;">{{num}}</h4>
+        </div>
     </div>
 </template>
 
