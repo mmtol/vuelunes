@@ -6,6 +6,8 @@
         <input type="number" v-model="numero"/>
         <br/>
         <button @click="crearCollatz">Sacar Collatz</button>
+        <h2 v-if="$filters.parimpar(numero)">PAR</h2>
+        <h2 v-else>IMPAR</h2>
         <h2>{{ collatz }}</h2>
     </div>
 </template>
@@ -25,7 +27,8 @@ export default
     {
         crearCollatz()
         {
-            this.collatz.push(this.numero);
+            this.collatz = [];
+            this.collatz.push(parseInt(this.numero));
             while (this.numero != 1)
             {
                 if (this.numero % 2 == 0)
